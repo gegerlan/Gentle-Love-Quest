@@ -1,8 +1,3 @@
-
-def debug_put(message)
-  p message if $DEBUG
-end
-
 class Game_Actor
   def naked?
     return !(armor3_id != 0)
@@ -59,62 +54,5 @@ class Game_Interpreter
   # Is anyone in the party naked?
   def isAnyoneNaked?
     return $game_party.members.any?{ |actor| actor.naked? }
-  end
-end
-
-class Game_Party < Game_Unit
-  def increaseExhibitions(amount)
-    @actors.each do |actor_id|
-      actor = $game_actors[actor_id]
-      if actor.naked?
-        actor.stats["exhibition"] += amount
-      end
-    end
-  end
-end
-
-# Adds the ability to run a Game_Interpreter during any scene
-class Scene_Base
-  attr_accessor :interpreter_queue
-  
-  alias atq_pre_interp_start start
-  def start
-    atq_pre_interp_start
-    @interpreter_queue = []
-  end
-  alias atq_pre_interp_upd update
-  def update
-    atq_pre_interp_upd
-    @queue_item = @interpreter_queue.shift if @queue_item == nil
-    unless @queue_item == nil
-      if @queue_item.is_a?(Game_Interpreter)
-        @queue_item.update
-        if not @queue_item.running?
-          @queue_item = nil
-        end
-      else
-        @queue_item = nil
-      end
-    end
-  end
-end
-
-# Makes the game call a CE when the actor's equipment changes
-class Game_Actor < Game_Battler
-  alias pre_atq_actor_id_setup setup
-  def setup(actor_id)
-    pre_atq_actor_id_setup(actor_id)
-    @actor_id = actor_id
-  end
-  
-  EQUIPMENT_CHANGE_CE = 1
-  alias pre_atq_chg_eqp change_equip
-  def change_equip(equip_type, item, test = false)
-    pre_atq_chg_eqp(equip_type, item, test)
-    unless test
-      interpreter = Game_Interpreter.new(0, true)
-      interpreter.setup($data_common_events[EQUIPMENT_CHANGE_CE].list, @actor_id)
-      $scene.interpreter_queue << interpreter
-    end
   end
 end
