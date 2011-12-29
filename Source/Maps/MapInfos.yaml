@@ -1,0 +1,23 @@
+--- 
+root: 
+  1: !ruby/object:RPG::MapInfo 
+    expanded: true
+    name: World
+    order: 1
+    parent_id: 0
+    scroll_x: 628
+    scroll_y: 308
+  2: !ruby/object:RPG::MapInfo 
+    expanded: true
+    name: Cornelia
+    order: 2
+    parent_id: 1
+    scroll_x: 608
+    scroll_y: 446
+  3: !ruby/object:RPG::MapInfo 
+    expanded: false
+    name: Eva's House
+    order: 3
+    parent_id: 2
+    scroll_x: 304
+    scroll_y: 256

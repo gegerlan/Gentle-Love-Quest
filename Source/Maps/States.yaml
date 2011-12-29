@@ -1,0 +1,476 @@
+--- 
+root: 
+- 
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 0
+  battle_only: false
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 0
+  icon_index: 224
+  id: 1
+  message1: " is knockout"
+  message2: " was defeated!"
+  message3: ""
+  message4: " was revived!"
+  name: Incapacitated
+  nonresistance: false
+  note: ""
+  offset_by_opposite: false
+  priority: 10
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 4
+  slip_damage: false
+  spi_rate: 100
+  state_set: 
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 0
+  battle_only: false
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 0
+  icon_index: 225
+  id: 2
+  message1: " has been poisoned!"
+  message2: " has been poisoned!"
+  message3: ""
+  message4: " is cured poison!"
+  name: Poison
+  nonresistance: false
+  note: ""
+  offset_by_opposite: false
+  priority: 4
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: true
+  spi_rate: 100
+  state_set: []
+
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 20
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 3
+  icon_index: 226
+  id: 3
+  message1: " has been blinded!"
+  message2: " has been blinded!"
+  message3: ""
+  message4: " is cured blindness!"
+  name: Darkness
+  nonresistance: false
+  note: ""
+  offset_by_opposite: false
+  priority: 5
+  reduce_hit_ratio: true
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 100
+  state_set: []
+
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 20
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 3
+  icon_index: 227
+  id: 4
+  message1: " has been silenced!"
+  message2: " has been silenced!"
+  message3: ""
+  message4: " is cured silence!"
+  name: Silence
+  nonresistance: false
+  note: ""
+  offset_by_opposite: false
+  priority: 6
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 1
+  slip_damage: false
+  spi_rate: 100
+  state_set: []
+
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 40
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 1
+  icon_index: 228
+  id: 5
+  message1: " is confused!"
+  message2: " is confused!"
+  message3: ""
+  message4: " has recovered from confusion!"
+  name: Confusion
+  nonresistance: false
+  note: ""
+  offset_by_opposite: false
+  priority: 7
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 3
+  slip_damage: false
+  spi_rate: 100
+  state_set: []
+
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 20
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 0
+  icon_index: 229
+  id: 6
+  message1: " has fallen asleep!"
+  message2: " has fallen asleep!"
+  message3: " is sleeping..."
+  message4: " has woken up!"
+  name: Sleep
+  nonresistance: false
+  note: ""
+  offset_by_opposite: false
+  priority: 8
+  reduce_hit_ratio: false
+  release_by_damage: true
+  restriction: 5
+  slip_damage: false
+  spi_rate: 100
+  state_set: []
+
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 15
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 3
+  icon_index: 230
+  id: 7
+  message1: " is paralyzed and cannot move!"
+  message2: " has been paralyzed!"
+  message3: " is paralyzed and cannot move!"
+  message4: " is cured paralysis!"
+  name: Paralysis
+  nonresistance: false
+  note: ""
+  offset_by_opposite: false
+  priority: 9
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 5
+  slip_damage: false
+  spi_rate: 100
+  state_set: []
+
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 100
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 0
+  icon_index: 231
+  id: 8
+  message1: " has stunned!"
+  message2: " has stunned!"
+  message3: " is stunned..."
+  message4: " is stunned..."
+  name: Stun
+  nonresistance: false
+  note: ""
+  offset_by_opposite: false
+  priority: 3
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 4
+  slip_damage: false
+  spi_rate: 100
+  state_set: []
+
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 150
+  auto_release_prob: 100
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 5
+  icon_index: 232
+  id: 9
+  message1: "'s strength is increased!"
+  message2: "'s strength is increased!"
+  message3: ""
+  message4: "'s strength is back to normal!"
+  name: ATK up
+  nonresistance: true
+  note: ""
+  offset_by_opposite: true
+  priority: 1
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 100
+  state_set: 
+  - 13
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 100
+  battle_only: true
+  def_rate: 150
+  element_set: []
+
+  hold_turn: 5
+  icon_index: 233
+  id: 10
+  message1: "'s defense is increased!"
+  message2: "'s defense is increased!!"
+  message3: ""
+  message4: "'s defense is back to normal!"
+  name: DEF up
+  nonresistance: true
+  note: ""
+  offset_by_opposite: true
+  priority: 1
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 100
+  state_set: 
+  - 14
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 100
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 5
+  icon_index: 234
+  id: 11
+  message1: "'s mind is increased!"
+  message2: "'s mind is increased!"
+  message3: ""
+  message4: "'s mind is back to normal!"
+  name: SPI up
+  nonresistance: true
+  note: ""
+  offset_by_opposite: true
+  priority: 1
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 150
+  state_set: 
+  - 15
+- !ruby/object:RPG::State 
+  agi_rate: 150
+  atk_rate: 100
+  auto_release_prob: 100
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 5
+  icon_index: 235
+  id: 12
+  message1: "'s agility is increased!"
+  message2: "'s agility is increased!"
+  message3: ""
+  message4: "'s agility is back to normal!"
+  name: AGI up
+  nonresistance: true
+  note: ""
+  offset_by_opposite: true
+  priority: 1
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 100
+  state_set: 
+  - 16
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 50
+  auto_release_prob: 100
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 5
+  icon_index: 236
+  id: 13
+  message1: "'s strength is decreased!"
+  message2: "'s strength is decreased!"
+  message3: ""
+  message4: "'s strength is back to normal!"
+  name: ATK down
+  nonresistance: false
+  note: ""
+  offset_by_opposite: true
+  priority: 1
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 100
+  state_set: 
+  - 9
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 100
+  battle_only: true
+  def_rate: 50
+  element_set: []
+
+  hold_turn: 5
+  icon_index: 237
+  id: 14
+  message1: "'s defense has decreased!"
+  message2: "'s defense has decreased!"
+  message3: ""
+  message4: "'s defense is back to normal!"
+  name: DEF down
+  nonresistance: false
+  note: ""
+  offset_by_opposite: true
+  priority: 1
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 100
+  state_set: 
+  - 10
+- !ruby/object:RPG::State 
+  agi_rate: 100
+  atk_rate: 100
+  auto_release_prob: 100
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 5
+  icon_index: 238
+  id: 15
+  message1: "'s mind is decreased!"
+  message2: "'s mind is decreased!"
+  message3: ""
+  message4: "'s mind is back to normal!"
+  name: SPI down
+  nonresistance: false
+  note: ""
+  offset_by_opposite: true
+  priority: 1
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 50
+  state_set: 
+  - 11
+- !ruby/object:RPG::State 
+  agi_rate: 50
+  atk_rate: 100
+  auto_release_prob: 100
+  battle_only: true
+  def_rate: 100
+  element_set: []
+
+  hold_turn: 5
+  icon_index: 239
+  id: 16
+  message1: "'s agility has decreased!"
+  message2: "'s agility has decreased!"
+  message3: ""
+  message4: "'s agility is back to normal!"
+  name: AGI down
+  nonresistance: false
+  note: ""
+  offset_by_opposite: true
+  priority: 1
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 100
+  state_set: 
+  - 12
+- !ruby/object:RPG::State 
+  agi_rate: 200
+  atk_rate: 200
+  auto_release_prob: 0
+  battle_only: true
+  def_rate: 200
+  element_set: []
+
+  hold_turn: 50
+  icon_index: 232
+  id: 17
+  message1: " now looks scary!"
+  message2: " now looks scary!"
+  message3: ""
+  message4: " now looks normal again..."
+  name: Enraged Horde
+  nonresistance: true
+  note: ""
+  offset_by_opposite: true
+  priority: 1
+  reduce_hit_ratio: false
+  release_by_damage: false
+  restriction: 0
+  slip_damage: false
+  spi_rate: 200
+  state_set: 
+  - 13

@@ -1,0 +1,279 @@
+--- 
+root: 
+- 
+- !ruby/object:RPG::CommonEvent 
+  id: 1
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@event_id == 1"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - Actor 1 in database, i.e. Eva
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - $game_actors[1].naked?
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 2
+    parameters: 
+    - 1
+    - Eva
+    - 0
+    - eva - normal
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 4
+    - 1
+    - 4
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 2
+    parameters: 
+    - 1
+    - Eva
+    - 4
+    - eva - normal
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 4
+    - 1
+    - 4
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 2
+    parameters: 
+    - 1
+    - Eva
+    - 4
+    - eva - normal
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 4
+    - 1
+    - 4
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 2
+    parameters: 
+    - 1
+    - Eva
+    - 3
+    - eva - normal
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - Default
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 1
+    parameters: 
+    - 1
+    - Eva
+    - 2
+    - eva - normal
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: Update Equipment
+  switch_id: 1
+  trigger: 0
+- !ruby/object:RPG::CommonEvent 
+  id: 2
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: ""
+  switch_id: 1
+  trigger: 0
+- !ruby/object:RPG::CommonEvent 
+  id: 3
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: ""
+  switch_id: 1
+  trigger: 0
+- !ruby/object:RPG::CommonEvent 
+  id: 4
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: ""
+  switch_id: 1
+  trigger: 0
+- !ruby/object:RPG::CommonEvent 
+  id: 5
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: ""
+  switch_id: 1
+  trigger: 0
+- !ruby/object:RPG::CommonEvent 
+  id: 6
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: ""
+  switch_id: 1
+  trigger: 0
+- !ruby/object:RPG::CommonEvent 
+  id: 7
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: ""
+  switch_id: 1
+  trigger: 0
+- !ruby/object:RPG::CommonEvent 
+  id: 8
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: ""
+  switch_id: 1
+  trigger: 0
+- !ruby/object:RPG::CommonEvent 
+  id: 9
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: ""
+  switch_id: 1
+  trigger: 0
+- !ruby/object:RPG::CommonEvent 
+  id: 10
+  list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 0
+    parameters: []
+
+  name: ""
+  switch_id: 1
+  trigger: 0

@@ -1,0 +1,423 @@
+--- 
+root: 
+- 
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 2
+  description: Some resistance against cold and flu.
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 44
+  id: 1
+  kind: 2
+  name: Clothes
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: Every Orc's slave wears one of these.
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 60
+  id: 2
+  kind: 3
+  name: Orc's Slave Collar
+  note: ""
+  prevent_critical: false
+  price: 15
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 6
+  description: Mmmmm... so warm...
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 44
+  id: 3
+  kind: 2
+  name: Thick Clothes
+  note: ""
+  prevent_critical: false
+  price: 250
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 10
+  description: Dressed like a cow girl (Property of Hideki's Farms)
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 45
+  id: 4
+  kind: 2
+  name: Borrowed Cow Suit
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 5
+  atk: 1
+  auto_hp_recover: false
+  def: 10
+  description: Work uniform for milking cows
+  double_exp_gain: false
+  element_set: []
+
+  eva: 5
+  half_mp_cost: false
+  icon_index: 45
+  id: 5
+  kind: 2
+  name: Milking Cow Suit
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 3
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 6
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 7
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 8
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 9
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 10
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 11
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 12
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 13
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 14
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 15
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 16
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 17
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 18
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 19
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
+- !ruby/object:RPG::Armor 
+  agi: 0
+  atk: 0
+  auto_hp_recover: false
+  def: 0
+  description: ""
+  double_exp_gain: false
+  element_set: []
+
+  eva: 0
+  half_mp_cost: false
+  icon_index: 0
+  id: 20
+  kind: 0
+  name: ""
+  note: ""
+  prevent_critical: false
+  price: 0
+  spi: 0
+  state_set: []
+
