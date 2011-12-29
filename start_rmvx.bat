@@ -47,6 +47,8 @@ CD %SCRIPTS_PATH%
 run.exe script_importer.rb "%PROJECT_PATH%"
 run.exe data_importer.rb "%PROJECT_PATH%"
 
+run.exe logtime.rb "%PROJECT_PATH%"
+
 CD %PROJECT_PATH%
 START /WAIT Game.rvproj
 
