@@ -4621,7 +4621,7 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 12
-          - $scene.someoneNaked
+          - isAnyoneNaked?
         - !ruby/object:RPG::EventCommand 
           code: 108
           indent: 1
@@ -4817,7 +4817,7 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 12
-          - $scene.someoneNaked
+          - isAnyoneNaked?
         - !ruby/object:RPG::EventCommand 
           code: 108
           indent: 1
@@ -5036,7 +5036,7 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 12
-          - $scene.someoneNaked
+          - isAnyoneNaked?
         - !ruby/object:RPG::EventCommand 
           code: 108
           indent: 1
