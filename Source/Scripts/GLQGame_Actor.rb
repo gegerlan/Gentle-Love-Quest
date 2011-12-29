@@ -43,4 +43,19 @@ class Game_Actor < Game_Battler
     sizes = ["A", "B", "C", "D", "DD", "DDD", "E", "F","G","H","HH","HHH","Insane"]
     return sizes[index]
   end
+  # Makes @stats and @custom_attr accessible as normal attributes of Game_Actor
+  # i.e. calling $game_party.members[0].pervert will given you the perversion 
+  # value of the party leader
+  def method_missing(sym, *args, &block)
+    [@stats, @custom_attr].each do |haystack|
+      key = sym.to_s
+      if key =~ /=$/
+        key.gsub!(/=$/, "")
+        return haystack[key] = args.inject {|s,x| s ? s+x : x} if haystack.has_key?(key)
+      else
+        return haystack[key] if haystack.has_key?(key)
+      end
+    end
+    super(sym, *args, &block)
+  end
 end
