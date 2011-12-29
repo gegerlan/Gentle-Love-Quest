@@ -1,0 +1,148 @@
+--- 
+root: 
+- 
+- !ruby/object:RPG::Skill 
+  absorb_damage: false
+  animation_id: 55
+  atk_f: 100
+  base_damage: 0
+  common_event_id: 0
+  damage_to_mp: false
+  description: A woman's gaze can freeze you!
+  element_set: []
+
+  hit: 100
+  icon_index: 118
+  id: 1
+  ignore_defense: false
+  message1: stares with hate!
+  message2: ""
+  minus_state_set: []
+
+  mp_cost: 0
+  name: Stares that freeze
+  note: ""
+  occasion: 1
+  physical_attack: true
+  plus_state_set: 
+  - 1
+  scope: 1
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Skill 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 200
+  base_damage: 9999
+  common_event_id: 0
+  damage_to_mp: false
+  description: Life is too long and too painful
+  element_set: []
+
+  hit: 100
+  icon_index: 224
+  id: 2
+  ignore_defense: false
+  message1: " tries to kill herself."
+  message2: ""
+  minus_state_set: []
+
+  mp_cost: 0
+  name: Suicide
+  note: ""
+  occasion: 1
+  physical_attack: true
+  plus_state_set: []
+
+  scope: 7
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Skill 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 200
+  base_damage: 9999
+  common_event_id: 0
+  damage_to_mp: false
+  description: You just want to win the battle, right?
+  element_set: []
+
+  hit: 100
+  icon_index: 224
+  id: 3
+  ignore_defense: true
+  message1: " attacks with might!"
+  message2: ""
+  minus_state_set: []
+
+  mp_cost: 0
+  name: Death
+  note: ""
+  occasion: 1
+  physical_attack: true
+  plus_state_set: []
+
+  scope: 1
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Skill 
+  absorb_damage: false
+  animation_id: 37
+  atk_f: 0
+  base_damage: -150
+  common_event_id: 0
+  damage_to_mp: false
+  description: Basic healing skill
+  element_set: []
+
+  hit: 100
+  icon_index: 128
+  id: 4
+  ignore_defense: false
+  message1: " uses Healing!"
+  message2: ""
+  minus_state_set: []
+
+  mp_cost: 10
+  name: Heal
+  note: ""
+  occasion: 0
+  physical_attack: false
+  plus_state_set: []
+
+  scope: 7
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Skill 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 30
+  common_event_id: 0
+  damage_to_mp: false
+  description: A lethal slashing technique.
+  element_set: []
+
+  hit: 100
+  icon_index: 131
+  id: 5
+  ignore_defense: false
+  message1: " uses the Sword of the Dragon!"
+  message2: ""
+  minus_state_set: []
+
+  mp_cost: 5
+  name: Dragon's Eye
+  note: ""
+  occasion: 1
+  physical_attack: false
+  plus_state_set: 
+  - 13
+  scope: 2
+  speed: 0
+  spi_f: 0
+  variance: 20

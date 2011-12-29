@@ -1,0 +1,199 @@
+--- 
+root: 
+- 
+- !ruby/object:RPG::Class 
+  armor_set: 
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 14
+  - 15
+  - 17
+  - 18
+  - 19
+  element_ranks: !ruby/object:Table 
+    data: 
+    - 0
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    dim: 1
+    xsize: 17
+    ysize: 1
+    zsize: 1
+  id: 1
+  learnings: []
+
+  name: Femake Rookie
+  position: 0
+  skill_name: ""
+  skill_name_valid: false
+  state_ranks: !ruby/object:Table 
+    data: 
+    - 0
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    dim: 1
+    xsize: 18
+    ysize: 1
+    zsize: 1
+  weapon_set: 
+  - 1
+  - 2
+  - 3
+  - 4
+- !ruby/object:RPG::Class 
+  armor_set: []
+
+  element_ranks: !ruby/object:Table 
+    data: 
+    - 0
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    dim: 1
+    xsize: 17
+    ysize: 1
+    zsize: 1
+  id: 2
+  learnings: []
+
+  name: Child
+  position: 0
+  skill_name: ""
+  skill_name_valid: false
+  state_ranks: !ruby/object:Table 
+    data: 
+    - 0
+    - 3
+    - 3
+    - 3
+    - 6
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    dim: 1
+    xsize: 18
+    ysize: 1
+    zsize: 1
+  weapon_set: []
+
+- !ruby/object:RPG::Class 
+  armor_set: []
+
+  element_ranks: !ruby/object:Table 
+    data: 
+    - 0
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    dim: 1
+    xsize: 17
+    ysize: 1
+    zsize: 1
+  id: 3
+  learnings: []
+
+  name: Princess Loli
+  position: 2
+  skill_name: ""
+  skill_name_valid: false
+  state_ranks: !ruby/object:Table 
+    data: 
+    - 0
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    dim: 1
+    xsize: 18
+    ysize: 1
+    zsize: 1
+  weapon_set: []
+

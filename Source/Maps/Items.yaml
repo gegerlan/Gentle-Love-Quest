@@ -1,0 +1,366 @@
+--- 
+root: 
+- 
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: Can nullify some spells.
+  element_set: []
+
+  hp_recovery: 500
+  hp_recovery_rate: 0
+  icon_index: 133
+  id: 1
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Spellbreaker
+  note: ""
+  occasion: 3
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 0
+  scope: 0
+  speed: 0
+  spi_f: 0
+  variance: 0
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: It says "You've been rick rolled". I wonder what that means.
+  element_set: []
+
+  hp_recovery: 0
+  hp_recovery_rate: 0
+  icon_index: 150
+  id: 2
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Legendary XXX Pic
+  note: ""
+  occasion: 3
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 0
+  scope: 0
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 30
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: It swings... slowly...
+  element_set: []
+
+  hp_recovery: 0
+  hp_recovery_rate: 0
+  icon_index: 144
+  id: 3
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Pendulum
+  note: ""
+  occasion: 1
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: 
+  - 7
+  price: 10
+  scope: 1
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 37
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: true
+  damage_to_mp: false
+  description: Garden-variety RPG healing potion. Not too strong.
+  element_set: []
+
+  hp_recovery: 100
+  hp_recovery_rate: 0
+  icon_index: 64
+  id: 4
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Potion
+  note: ""
+  occasion: 0
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 25
+  scope: 7
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: Allows entrance in the Royal Palace of Cornelia
+  element_set: []
+
+  hp_recovery: 0
+  hp_recovery_rate: 0
+  icon_index: 148
+  id: 5
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Cornelia Royal Pass
+  note: ""
+  occasion: 3
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 0
+  scope: 0
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: Display special data about the holder
+  element_set: []
+
+  hp_recovery: 0
+  hp_recovery_rate: 0
+  icon_index: 145
+  id: 6
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: ???
+  note: ""
+  occasion: 2
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 0
+  scope: 0
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: The door shouldn't be that far away...
+  element_set: []
+
+  hp_recovery: 0
+  hp_recovery_rate: 0
+  icon_index: 80
+  id: 7
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Library Key
+  note: ""
+  occasion: 3
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 0
+  scope: 0
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: This private did a very good job
+  element_set: []
+
+  hp_recovery: 0
+  hp_recovery_rate: 0
+  icon_index: 66
+  id: 8
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Orc Cum
+  note: ""
+  occasion: 3
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 0
+  scope: 0
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: From a Commander Orc
+  element_set: []
+
+  hp_recovery: 0
+  hp_recovery_rate: 0
+  icon_index: 66
+  id: 9
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Orc Cum+
+  note: ""
+  occasion: 3
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 0
+  scope: 0
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: From a Commander Orc, but "seasoned"
+  element_set: []
+
+  hp_recovery: 0
+  hp_recovery_rate: 0
+  icon_index: 66
+  id: 10
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Orc Cum++
+  note: ""
+  occasion: 3
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 0
+  scope: 0
+  speed: 0
+  spi_f: 0
+  variance: 20
+- !ruby/object:RPG::Item 
+  absorb_damage: false
+  animation_id: 0
+  atk_f: 0
+  base_damage: 0
+  common_event_id: 0
+  consumable: false
+  damage_to_mp: false
+  description: The sign of the warrior
+  element_set: []
+
+  hp_recovery: 0
+  hp_recovery_rate: 0
+  icon_index: 103
+  id: 11
+  ignore_defense: false
+  minus_state_set: []
+
+  mp_recovery: 0
+  mp_recovery_rate: 0
+  name: Warrior's Emblem
+  note: ""
+  occasion: 3
+  parameter_points: 0
+  parameter_type: 0
+  physical_attack: false
+  plus_state_set: []
+
+  price: 0
+  scope: 0
+  speed: 0
+  spi_f: 0
+  variance: 20

@@ -1,0 +1,88 @@
+--- 
+root: 
+- 
+- !ruby/object:RPG::Weapon 
+  agi: 0
+  animation_id: 19
+  atk: 3
+  critical_bonus: false
+  def: 0
+  description: A simple wooden club.
+  dual_attack: false
+  element_set: 
+  - 4
+  fast_attack: false
+  hit: 95
+  icon_index: 14
+  id: 1
+  name: Club
+  note: ""
+  price: 40
+  spi: 0
+  state_set: []
+
+  two_handed: false
+- !ruby/object:RPG::Weapon 
+  agi: 0
+  animation_id: 7
+  atk: 5
+  critical_bonus: false
+  def: 0
+  description: Better than a piece of wood
+  dual_attack: false
+  element_set: 
+  - 2
+  fast_attack: false
+  hit: 95
+  icon_index: 1
+  id: 2
+  name: Basic Sword
+  note: ""
+  price: 70
+  spi: 0
+  state_set: []
+
+  two_handed: false
+- !ruby/object:RPG::Weapon 
+  agi: 0
+  animation_id: 10
+  atk: 6
+  critical_bonus: false
+  def: 0
+  description: With the power of the lightning
+  dual_attack: false
+  element_set: 
+  - 2
+  - 11
+  fast_attack: false
+  hit: 95
+  icon_index: 1
+  id: 3
+  name: Thunder Sword
+  note: ""
+  price: 200
+  spi: 0
+  state_set: []
+
+  two_handed: false
+- !ruby/object:RPG::Weapon 
+  agi: 0
+  animation_id: 13
+  atk: 8
+  critical_bonus: true
+  def: 0
+  description: Increases the amount of critical hits
+  dual_attack: false
+  element_set: 
+  - 2
+  fast_attack: false
+  hit: 95
+  icon_index: 16
+  id: 4
+  name: Warrior Sword
+  note: ""
+  price: 300
+  spi: 0
+  state_set: []
+
+  two_handed: false
