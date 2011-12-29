@@ -109,7 +109,7 @@
 51303279    Adjust Menu                                  Adjust_Menu.rb
 26077677                                                 EMPTY
 51507606    GLQ Custom Functions                         GLQ_Custom_Functions.rb
-57300655    ATQ Naked                                    ATQ_Naked.rb
+57300655    GLQ Naked Check                              GLQ_Naked_Check.rb
 18563598    GLQ Exhibition                               GLQ_Exhibition.rb
 22894906    GLQ Scene Interpreter                        GLQ_Scene_Interpreter.rb
 44721910    GLQ Equipment CE call                        GLQ_Equipment_CE_call.rb
