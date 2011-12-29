@@ -95,13 +95,13 @@
 27282603    #Neo Message System                          EMPTY
 15821371    NMS 3                                        NMS_3.rb
 41403776                                                 EMPTY
-62398079    Window_Colors                                Window_Colors.rb
+62398079    GLQWindow_Colors                             GLQWindow_Colors.rb
 36750814                                                 EMPTY
 91801098    #Status screens                              EMPTY
-20468172    Window_MenuStatus                            Window_MenuStatus.rb
-50391841    Game_Actor                                   Game_Actor.rb
-92461649    Window_Status                                Window_Status.rb
-21015214    Scene_Status                                 Scene_Status.rb
+20468172    GLQWindow_MenuStatus                         GLQWindow_MenuStatus.rb
+50391841    GLQGame_Actor                                GLQGame_Actor.rb
+92461649    GLQWindow_Status                             GLQWindow_Status.rb
+21015214    GLQScene_Status                              GLQScene_Status.rb
 30592486                                                 EMPTY
 73691656    #Achievements                                EMPTY
 25487659    Window_NoModal                               Window_NoModal.rb

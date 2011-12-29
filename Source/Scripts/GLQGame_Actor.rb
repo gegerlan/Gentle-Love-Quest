@@ -1,0 +1,46 @@
+class Game_Actor < Game_Battler
+  
+  attr_accessor   :stats
+  attr_accessor   :custom_attr
+  
+  alias glq_initialize initialize
+  
+  def initialize(actor_id)
+    glq_initialize(actor_id)
+ 
+    @stats = {
+      "masturbation" => 0,
+      "exhibition"   => 0,
+      "fuck"         => 0,
+      "women"        => 0,
+      "oral"         => 0,
+      "anal"         => 0,
+      "bondage"      => 0,
+      "whore"        => 0,
+      "rape"         => 0,
+      "animal"       => 0,
+      "monster"      => 0,
+      "demon"        => 0,
+      "hypno"        => 0,
+      "pokemon"      => 0,
+      "givenMilk"    => 0
+    }
+
+    @custom_attr = {
+      "intelligence" => 0,
+      "alignment"    => 0,
+      "horny"        => 0,
+      "pervert"      => 0,
+      "fertility"    => 10,
+      "breastSize"   => 2,
+      "cow"          => 0,
+      "mare"         => 0,
+      "fullBreast"   => 100,
+    }
+  end
+  
+  def breastSize(index)
+    sizes = ["A", "B", "C", "D", "DD", "DDD", "E", "F","G","H","HH","HHH","Insane"]
+    return sizes[index]
+  end
+end
