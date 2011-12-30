@@ -5,7 +5,7 @@ end
 
 class Game_Actor
   def naked?
-    return !(armor3_id != 0)
+    return armor3_id == 0
   end
 end
 class Game_Actors
