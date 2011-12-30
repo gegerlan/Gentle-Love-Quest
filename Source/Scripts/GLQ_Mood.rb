@@ -18,9 +18,9 @@ class Game_Interpreter
   # Set the mood new_mood for one or more members of the player's 
   # party by their position in the team.
   # e.g.
-  # setMood("Neutral", 0)
+  # setPartyMood("Neutral", 0)
   #   Set the mood to Neutral for the first party member (the player)
-  # setMood("Smiling", 1, 2)
+  # setPartyMood("Smiling", 1, 2)
   #   Set the mood to Smiling for the second and third members of the party.
   def setPartyMood(new_mood, *member_indices)
     member_indices.each do |member_index|
