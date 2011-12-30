@@ -801,6 +801,9 @@ class Window_Message < Window_Selectable
      # Woratana's :: Draw Face
      @text.gsub!(/\\FA\{(.*?)\}/i) { "\x12{#{$1}}" }
      
+     # GLQ :: Draw Actor Face
+     @text.gsub!(/\\AC\[(.*?)\]/i) { "\x79{#{$1}}" }
+     
      # Woratana's :: Temporary Width
      @text.scan(/\\WW\[([-,0-9]+)\]/i)
      if $1.to_s != ''
@@ -1026,6 +1029,37 @@ class Window_Message < Window_Selectable
       when "\x99"
         @text.sub!(/\[(.*?)\]/, "")
         RPG::BGM.new($1).play
+      when "\x79"
+        @text.sub!(/\{(.*?)\}/, "")
+        a = $1.to_s.split(',')
+        
+        actor = $game_actors[a[0].to_i]
+        state = a[1] || "Smiling"
+        $nms.side = a[2] if a[2] != nil
+        
+        if actor != nil
+          
+          actor_name = actor.name
+
+          case actor.armor3_id
+          when 0
+            actor_armor = "Nude"
+          when 1
+            actor_armor = "Normal"
+          when 4
+            actor_armor = "Cow"
+          when 5
+            actor_armor = "Cow"
+          else
+            actor_armor = "Normal"
+          end
+          
+          $nms.face_name = "#{actor_name} - #{actor_armor} - #{state}"
+          #$nms.face_index = 0
+          nms_draw_new_face
+          @ori_x = @face.x        
+          
+        end
       when "\x09"
         new_line
       when "\x10"
