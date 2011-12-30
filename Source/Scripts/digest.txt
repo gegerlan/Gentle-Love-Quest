@@ -93,6 +93,7 @@
 47692047    Font fix                                     Font_fix.rb
 44436049                                                 EMPTY
 27282603    #Neo Message System                          EMPTY
+91166452    GLQ Actor Portrait                           GLQ_Actor_Portrait.rb
 15821371    NMS 3                                        NMS_3.rb
 41403776                                                 EMPTY
 62398079    GLQWindow_Colors                             GLQWindow_Colors.rb
