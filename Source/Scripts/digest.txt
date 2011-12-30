@@ -93,7 +93,6 @@
 47692047    Font fix                                     Font_fix.rb
 44436049                                                 EMPTY
 27282603    #Neo Message System                          EMPTY
-91166452    GLQ Actor Portrait                           GLQ_Actor_Portrait.rb
 15821371    NMS 3                                        NMS_3.rb
 41403776                                                 EMPTY
 62398079    GLQWindow_Colors                             GLQWindow_Colors.rb
@@ -110,11 +109,13 @@
 51303279    Adjust Menu                                  Adjust_Menu.rb
 26077677                                                 EMPTY
 51507606    GLQ Custom Functions                         GLQ_Custom_Functions.rb
+96923845    GLQ Actor Portrait                           GLQ_Actor_Portrait.rb
 57300655    GLQ Naked Check                              GLQ_Naked_Check.rb
 18563598    GLQ Exhibition                               GLQ_Exhibition.rb
 22894906    GLQ Scene Interpreter                        GLQ_Scene_Interpreter.rb
 44721910    GLQ Equipment CE call                        GLQ_Equipment_CE_call.rb
 6377774     GLQ Debug Log                                GLQ_Debug_Log.rb
+21463457    GLQ Mood                                     GLQ_Mood.rb
 14385854    ▼ Main Process                             EMPTY
 32270711    Main                                         Main.rb
 11708360                                                 EMPTY
