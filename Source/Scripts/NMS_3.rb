@@ -164,6 +164,14 @@ face_file_name: Face image's name
 face_index:     Index of the face in image (0 - 7)
 new_side:       Face side you want to change to
 
+\player << Player's Portrait as Face
+
+\party[member_position] << Party Member's Portrait as Face:
+member_position: Index of the member's position in the team (starts with 0)
+
+\actor[actor_position] << Actor's Portrait as Face:
+actor_position: Index of the actor as provided stated in the database (starts with 1)
+
 --------------------------
 >> [SOUND] PART
 --------------------------
@@ -695,19 +703,22 @@ class Window_Message < Window_Selectable
     #--------------------------
     # * GLQ FEATURES!!
     #-----------------------
-    # Draws face of character in party (0 = player)
+    # \PARTY[member_index]
+    # Draws face of character in party (0 = player).
     @text.gsub!(/\\PARTY\[([0-9]+)\]/i) do 
       actor = $game_party.members[$1.to_i]
       $game_message.face_name = actor.portrait_name
       ""
     end
-    # Draws face of character defined as an actor (1 = Eva)
+    # \ACTOR[actor_index]
+    # Draws face of character defined as an actor (1 = Eva).
     @text.gsub!(/\\ACTOR\[([0-9]+)\]/i) do 
       actor = $game_actors[$1.to_i]
       $game_message.face_name = actor.portrait_name
       ""
     end
-    
+    # \PLAYER
+    # Draws the face of the character leading the current party.
     @text.gsub!(/\\PLAYER/i) do 
       actor = $game_party.members[0]
       $game_message.face_name = actor.portrait_name
