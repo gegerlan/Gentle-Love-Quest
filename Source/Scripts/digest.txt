@@ -94,6 +94,7 @@
 44436049                                                 EMPTY
 27282603    #Neo Message System                          EMPTY
 15821371    NMS 3                                        NMS_3.rb
+39505085    GLQ Placeholder Faceset                      GLQ_Placeholder_Faceset.rb
 41403776                                                 EMPTY
 62398079    GLQWindow_Colors                             GLQWindow_Colors.rb
 36750814                                                 EMPTY
