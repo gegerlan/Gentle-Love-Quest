@@ -4,7 +4,6 @@ class Game_Actor < Game_Battler
   attr_accessor   :custom_attr
   
   attr_accessor   :mood
-  attr_accessor   :clothing
   
   alias glq_initialize initialize
   
@@ -12,8 +11,7 @@ class Game_Actor < Game_Battler
     glq_initialize(actor_id)
  
     @mood = "neutral"
-    @clothing = "normal"
-    
+
     @stats = {
       "masturbation" => 0,
       "exhibition"   => 0,
@@ -43,6 +41,21 @@ class Game_Actor < Game_Battler
       "mare"         => 0,
       "fullBreast"   => 100,
     }
+  end
+  
+  def clothing
+    case armor3_id
+    when 0
+      "Nude"
+    when 1
+      "Normal"
+    when 4
+      "Cow"
+    when 5
+      "Cow"
+    else
+      "Normal"
+    end
   end
   
   def breastSize(index)
