@@ -8,158 +8,19 @@ root:
     code: 111
     indent: 0
     parameters: 
-    - 12
-    - "@event_id == 1"
-  - !ruby/object:RPG::EventCommand 
-    code: 108
-    indent: 1
-    parameters: 
-    - Actor 1 in database, i.e. Eva
-  - !ruby/object:RPG::EventCommand 
-    code: 111
-    indent: 1
-    parameters: 
-    - 12
-    - $game_actors[1].naked?
-  - !ruby/object:RPG::EventCommand 
-    code: 322
-    indent: 2
-    parameters: 
+    - 4
     - 1
-    - Eva
-    - 0
-    - eva - normal
     - 0
   - !ruby/object:RPG::EventCommand 
-    code: 115
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 111
+    code: 117
     indent: 1
     parameters: 
-    - 4
-    - 1
-    - 4
-    - 5
-  - !ruby/object:RPG::EventCommand 
-    code: 322
-    indent: 2
-    parameters: 
-    - 1
-    - Eva
-    - 4
-    - eva - normal
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 115
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 111
-    indent: 1
-    parameters: 
-    - 4
-    - 1
-    - 4
-    - 4
-  - !ruby/object:RPG::EventCommand 
-    code: 322
-    indent: 2
-    parameters: 
-    - 1
-    - Eva
-    - 4
-    - eva - normal
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 115
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 111
-    indent: 1
-    parameters: 
-    - 4
-    - 1
-    - 4
-    - 2
-  - !ruby/object:RPG::EventCommand 
-    code: 322
-    indent: 2
-    parameters: 
-    - 1
-    - Eva
     - 3
-    - eva - normal
-    - 0
   - !ruby/object:RPG::EventCommand 
-    code: 115
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 108
+    code: 117
     indent: 1
     parameters: 
-    - Default
-  - !ruby/object:RPG::EventCommand 
-    code: 322
-    indent: 1
-    parameters: 
-    - 1
-    - Eva
     - 2
-    - eva - normal
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 115
-    indent: 1
-    parameters: []
-
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -182,22 +43,288 @@ root:
   id: 2
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - =========================
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - + Equipment related changes.           +
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - =========================
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - + This is used to handle custom         +
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - + events when equipment is worn      +
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - ---------------------------------------------
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - $game_actors[1].naked?
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - ""
+    - 0
+    - 0
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 1
+    parameters: 
+    - Sure is cold today.
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 4
+    - 1
+    - 4
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - ""
+    - 0
+    - 0
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 1
+    parameters: 
+    - Moo...
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 4
+    - 1
+    - 4
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - ""
+    - 0
+    - 0
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 1
+    parameters: 
+    - Moo...
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Update Eva's Equipment
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 3
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - $game_actors[1].naked?
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 1
+    parameters: 
+    - 1
+    - Eva
+    - 0
+    - eva - Nude
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 4
+    - 1
+    - 4
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 1
+    parameters: 
+    - 1
+    - Eva
+    - 4
+    - eva - Cow
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 4
+    - 1
+    - 4
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 1
+    parameters: 
+    - 1
+    - Eva
+    - 4
+    - eva - Cow
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 4
+    - 1
+    - 4
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 1
+    parameters: 
+    - 1
+    - Eva
+    - 3
+    - eva - Nude
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Default
+  - !ruby/object:RPG::EventCommand 
+    code: 322
+    indent: 0
+    parameters: 
+    - 1
+    - Eva
+    - 2
+    - eva - normal
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Update Eva's Sprite
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
