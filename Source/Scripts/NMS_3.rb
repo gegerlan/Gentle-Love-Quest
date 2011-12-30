@@ -696,7 +696,7 @@ class Window_Message < Window_Selectable
     # * GLQ FEATURES!!
     #-----------------------
     # Draws face of character in party (0 = player)
-    @text.gsub!(/\\MEMB\[([0-9]+)\]/i) do 
+    @text.gsub!(/\\PARTY\[([0-9]+)\]/i) do 
       actor = $game_party.members[$1.to_i]
       actor_name   = actor.name
       actor_mood   = actor.mood
@@ -705,7 +705,7 @@ class Window_Message < Window_Selectable
       ""
     end
     # Draws face of character defined as an actor (1 = Eva)
-    @text.gsub!(/\\CHAR\[([0-9]+)\]/i) do 
+    @text.gsub!(/\\ACTOR\[([0-9]+)\]/i) do 
       actor = $game_actors[$1.to_i]
       actor_name   = actor.name
       actor_mood   = actor.mood
