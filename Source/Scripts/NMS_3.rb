@@ -700,7 +700,7 @@ class Window_Message < Window_Selectable
       actor = $game_party.members[$1.to_i]
       actor_name   = actor.name
       actor_mood   = actor.mood
-      actor_clothes= actor.clothes
+      actor_clothes= actor.clothing
       $game_message.face_name = "#{actor_name} - #{actor_clothes} - #{actor_mood}" # Eva - Normal - Smiling
       ""
     end
