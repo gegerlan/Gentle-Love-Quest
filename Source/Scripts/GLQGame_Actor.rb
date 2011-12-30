@@ -3,11 +3,17 @@ class Game_Actor < Game_Battler
   attr_accessor   :stats
   attr_accessor   :custom_attr
   
+  attr_accessor   :mood
+  attr_accessor   :clothing
+  
   alias glq_initialize initialize
   
   def initialize(actor_id)
     glq_initialize(actor_id)
  
+    @mood = "neutral"
+    @clothing = "normal"
+    
     @stats = {
       "masturbation" => 0,
       "exhibition"   => 0,
