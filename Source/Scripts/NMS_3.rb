@@ -693,6 +693,19 @@ class Window_Message < Window_Selectable
     @text.gsub!(/\\\\/)             { "\\" }
     
     #--------------------------
+    # * GLQ FEATURES!!
+    #-----------------------
+    # Draws face of character in party (0 = player)
+    @text.gsub!(/\\CHAR\[([0-9]+)\]/i) do 
+      actor = $game_party.members[$1.to_i]
+      actor_name   = actor.name
+      actor_mood   = actor.mood
+      actor_clothes= actor.clothes
+      $game_message.face_name = "#{actor_name} - #{actor_clothes} - #{actor_mood}" # Eva - Normal - Smiling
+      ""
+    end
+    
+    #--------------------------
     # * NMS FEATURES!!
     #-----------------------
     # Woratana's :: Draw Weapon Name + Icon
