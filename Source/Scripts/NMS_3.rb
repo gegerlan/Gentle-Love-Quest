@@ -698,19 +698,19 @@ class Window_Message < Window_Selectable
     # Draws face of character in party (0 = player)
     @text.gsub!(/\\PARTY\[([0-9]+)\]/i) do 
       actor = $game_party.members[$1.to_i]
-      actor_name   = actor.name
-      actor_mood   = actor.mood
-      actor_clothes= actor.clothing
-      $game_message.face_name = "#{actor_name} - #{actor_clothes} - #{actor_mood}" # Eva - Normal - Smiling
+      $game_message.face_name = actor.portrait_name
       ""
     end
     # Draws face of character defined as an actor (1 = Eva)
     @text.gsub!(/\\ACTOR\[([0-9]+)\]/i) do 
       actor = $game_actors[$1.to_i]
-      actor_name   = actor.name
-      actor_mood   = actor.mood
-      actor_clothes= actor.clothing
-      $game_message.face_name = "#{actor_name} - #{actor_clothes} - #{actor_mood}" # Eva - Normal - Smiling
+      $game_message.face_name = actor.portrait_name
+      ""
+    end
+    
+    @text.gsub!(/\\PLAYER/i) do 
+      actor = $game_party.members[0]
+      $game_message.face_name = actor.portrait_name
       ""
     end
     
