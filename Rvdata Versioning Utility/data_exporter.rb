@@ -19,7 +19,7 @@ require 'yaml'
 require 'common'
 
 # Make sure RMVX isn't running
-exit if check_for_rmvx
+# exit if check_for_rmvx
 
 # Set up the directory paths
 $INPUT_DIR  = $PROJECT_DIR + '/' + $rvdata_DIR + '/'
