@@ -32,6 +32,9 @@ class Game_Actor
 end
 
 class Game_Interpreter
+  # See if any member of the party passes a check.
+  #
+  # checkParty(difficulty, attribute[, modifier[, modifier[, ...]]])
   def checkParty(difficulty, attributeName, *modifiers)
     success = false
     $game_party.members.each do |member|
@@ -40,10 +43,20 @@ class Game_Interpreter
     end
     return success
   end
+  
+  # See if the current leader of the party passes a check.
+  #
+  # checkPlayer(difficulty, attribute[, modifier[, modifier[, ...]]])
   def checkPlayer(difficulty, attributeName, *modifiers)
     return $game_party.members[0].check(difficulty, attributeName, *modifiers)
   end
+  # check(difficulty, attribute[, modifier[, modifier[, ...]]]) - alias for checkParty
   alias check checkParty
+  
+  # check actor (as defined in database) by using object (Game_Actor), 
+  # database position (integer) or name (string)
+  #
+  # checkActor(actorIdentifier, difficulty, attribute[, modifier[, modifier[, ...]]])
   def checkActor(actorIdentifier, difficulty, attributeName, *modifiers)
     actors = $game_actors.to_a.slice(1..-1)
     actor = getActor(actorIdentifier, actors)
@@ -52,14 +65,21 @@ class Game_Interpreter
     end
     return false
   end
+  
+  # Check current party member by using object (Game_Actor), party position (integer) or name (string)
+  # checkMember(memberIdentifier, difficulty, attribute[, modifier[, modifier[, ...]]])
   def checkMember(actorIdentifier, difficulty, attributeName, *modifiers)
-    actor = getActor(actorIdentifier, $game_paty.members)
+    actor = getActor(actorIdentifier, $game_party.members)
     if actor != nil
       return actor.check(difficulty, attributeName, *modifiers)
     end
     return false
   end
+  
   private
+  # Simplifies getting the actor when passed an integer, a string or an object.
+  # Context provides the source where to search for the actor, usually 
+  # $game_players or $game_party.members
   def getActor(actorIdentifier, context)
     if actorIdentifier.is_a?(Game_Actor)
       return actorIdentifier
