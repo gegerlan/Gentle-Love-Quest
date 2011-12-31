@@ -82,6 +82,26 @@ class Game_Actor < Game_Battler
       self.send("#{attribute}=", target_value)
     end
   end
+  # Lower one of the attributes for the actor.
+  #   attribute: attribute name to raise
+  #   delta: the decrease of the attribute
+  #   min: the smallest value the lower can decrease towards (i.e. attribute can't be lowered beyond this value)
+  def lower(attribute, delta, min)
+    current_value = self.send attribute
+    if min > current_value 
+      # Skip if the current value is less than the min value provided
+      current_value
+    else
+      target_value  = current_value - delta.abs
+      if target_value < min
+        # If the projected value is less than min, set the new value to min
+        target_value = min
+      end
+      # Makes a call setting the attribute
+      # e.g. sexAppeal=10
+      self.send("#{attribute}=", target_value)
+    end
+  end
   
   # Makes @stats and @custom_attr accessible as normal attributes of Game_Actor
   # i.e. calling $game_party.members[0].pervert will given you the perversion 
