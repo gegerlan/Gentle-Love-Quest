@@ -62,6 +62,27 @@ class Game_Actor < Game_Battler
     sizes = ["A", "B", "C", "D", "DD", "DDD", "E", "F","G","H","HH","HHH","Insane"]
     return sizes[index]
   end
+  # Raise one of the attributes for the actor.
+  #   attribute: attribute name to raise
+  #   delta: the improvement to the attribute
+  #   max: the highest value the raise can increase towards (i.e. attribute can't be raised beyond this value)
+  def raise(attribute, delta, max)
+    current_value = self.send attribute
+    if max < current_value
+      # Skip if the current value is greater than the max value provided
+      current_value
+    else
+      target_value  = current_value + delta.abs
+      if target_value > max
+        # If the projected value is greater than max, set the new value to max
+        target_value = max
+      end
+      # Makes a call setting the attribute
+      # e.g. sexAppeal=10
+      self.send("#{attribute}=", target_value)
+    end
+  end
+  
   # Makes @stats and @custom_attr accessible as normal attributes of Game_Actor
   # i.e. calling $game_party.members[0].pervert will given you the perversion 
   # value of the party leader
