@@ -111,6 +111,8 @@ class Game_Actor < Game_Battler
       key = sym.to_s
       if key =~ /=$/
         key.gsub!(/=$/, "")
+      end
+      if args.length > 0
         return haystack[key] = args.inject {|s,x| s ? s+x : x} if haystack.has_key?(key)
       else
         return haystack[key] if haystack.has_key?(key)
