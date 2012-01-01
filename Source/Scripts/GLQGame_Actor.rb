@@ -73,6 +73,7 @@ class Game_Actor < Game_Battler
   def raise(attribute, delta, max, context = nil)
     if context != nil
       context << attribute # add the attribute to the context, so changes to different attributes aren't thought of as being the same.
+      context << "raise" # add the type of change
       if @attribute_history[context]
         delta = delta / (@attribute_history[context].length + 1)
         if delta.floor <= 1
@@ -105,6 +106,20 @@ class Game_Actor < Game_Battler
   #   min: the smallest value the lower can decrease towards (i.e. attribute can't be lowered beyond this value)
   #   context: the context uniquely identifying the change
   def lower(attribute, delta, min, context = nil)
+    if context != nil
+      context << attribute # add the attribute to the context, so changes to different attributes aren't thought of as being the same.
+      context << "lower" # add the type of change
+      if @attribute_history[context]
+        delta = delta / (@attribute_history[context].length + 1)
+        if delta.floor <= 1
+          delta = 0
+        end
+      else
+        @attribute_history[context] = []
+      end
+      timestamp = Graphics.frame_count / Graphics.frame_rate #ingame time
+      @attribute_history[context] << timestamp
+    end
     current_value = self.send attribute
     if min > current_value 
       # Skip if the current value is less than the min value provided
@@ -143,10 +158,20 @@ class Game_Interpreter
   #   attribute: name of attribute to raise
   #   amount:  how much to change the attribute
   #   max: to top value the change may increase to
-  #   extra_context: 
+  #   extra_context: extra context for the identifying the change
   def raise(attribute, amount, max, extra_context = nil)
     context = [$game_map.map_id, @event_id, @page_id]
     context << extra_context if extra_context != nil
     $game_party.members[0].raise(attribute, amount, max, context)
+  end
+  # Decrease the attribute of the player, with a min possible value to alter towards.
+  #   attribute: name of attribute to lower
+  #   amount:  how much to change the attribute
+  #   min: to min value the change may increase to
+  #   extra_context: extra context for the identifying the change
+  def lower(attribute, amount, min, extra_context = nil)
+    context = [$game_map.map_id, @event_id, @page_id]
+    context << extra_context if extra_context != nil
+    $game_party.members[0].lower(attribute, amount, min, context)
   end
 end
