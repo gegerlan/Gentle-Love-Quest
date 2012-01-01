@@ -109,22 +109,31 @@ class Game_Actor < Game_Battler
   #   context: the context uniquely identifying the change
   def raise(attribute, delta, max, context = nil)
     if context != nil
+      # If we have a context, we want to see how often this change has been
+      # called and make appropriate changes to our delta value.
       delta = delta / (get_context_occurance(attribute, context) + 1)
-      add_history(attribute, context, delta.abs)
+      delta = delta.floor
     end
-    current_value = self.send attribute
-    if max < current_value
-      # Skip if the current value is greater than the max value provided
-      current_value
+    if delta == 0 
+      # If there is no change, just return the attribute value
+      self.send attribute
     else
-      target_value  = current_value + delta.abs
-      if target_value > max
-        # If the projected value is greater than max, set the new value to max
-        target_value = max
-      end
-      # Makes a call setting the attribute
-      # e.g. sexAppeal=10
-      self.send("#{attribute}=", target_value)
+      current_value = self.send attribute
+      if max < current_value
+        # Skip if the current value is greater than the max value provided
+        current_value
+      else
+        target_value  = current_value + delta.abs
+        if target_value > max
+          # If the projected value is greater than max, set the new value to max
+          target_value = max
+        end
+        # Add the change to the attribute history
+        add_history(attribute, context, target_value - current_value)
+        # Makes a call setting the attribute
+        # e.g. sexAppeal=10
+        self.send("#{attribute}=", target_value)
+      end      
     end
   end
   # Lower one of the attributes for the actor.
@@ -134,22 +143,31 @@ class Game_Actor < Game_Battler
   #   context: the context uniquely identifying the change
   def lower(attribute, delta, min, context = nil)
     if context != nil
+      # If we have a context, we want to see how often this change has been
+      # called and make appropriate changes to our delta value.
       delta = delta / (get_context_occurance(attribute, context) + 1)
-      add_history(attribute, context, -delta.abs)
+      delta = delta.floor
     end
-    current_value = self.send attribute
-    if min > current_value 
-      # Skip if the current value is less than the min value provided
-      current_value
+    if delta == 0 
+      # If there is no change, just return the attribute value
+      self.send attribute
     else
-      target_value  = current_value - delta.abs
-      if target_value < min
-        # If the projected value is less than min, set the new value to min
-        target_value = min
+      current_value = self.send attribute
+      if min > current_value 
+        # Skip if the current value is less than the min value provided
+        current_value
+      else
+        target_value  = current_value - delta.abs
+        if target_value < min
+          # If the projected value is less than min, set the new value to min
+          target_value = min
+        end
+        # Add the change to the attribute history
+        add_history(attribute, context, target_value - current_value)
+        # Makes a call setting the attribute
+        # e.g. sexAppeal=10
+        self.send("#{attribute}=", target_value)
       end
-      # Makes a call setting the attribute
-      # e.g. sexAppeal=10
-      self.send("#{attribute}=", target_value)
     end
   end
   
