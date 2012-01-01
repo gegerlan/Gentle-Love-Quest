@@ -13,6 +13,7 @@ class Game_Event < Game_Character
   attr_reader   :trigger                  # trigger
   attr_reader   :list                     # list of event commands
   attr_reader   :starting                 # starting flag
+  attr_reader   :page_id                  # current page of event
   #--------------------------------------------------------------------------
   # * Object Initialization
   #     map_id : map ID
@@ -26,6 +27,7 @@ class Game_Event < Game_Character
     @erased = false
     @starting = false
     @through = true
+    @page_id = 0
     moveto(@event.x, @event.y)            # Move to initial position
     refresh
   end
@@ -134,7 +136,9 @@ class Game_Event < Game_Character
   def refresh
     new_page = nil
     unless @erased                          # If not temporarily erased
+      index = @event.pages.length
       for page in @event.pages.reverse      # From the largest numbered page
+        index -= 1
         next unless conditions_met?(page)   # Determine if conditions are met
         new_page = page
         break
@@ -142,6 +146,7 @@ class Game_Event < Game_Character
     end
     if new_page != @page            # Event page changed?
       clear_starting                # Clear starting flag
+      @page_id = index
       setup(new_page)               # Set up event page
       check_event_trigger_auto      # Check autorun event
     end
@@ -169,7 +174,7 @@ class Game_Event < Game_Character
     check_event_trigger_auto                    # Check autorun event
     if @interpreter != nil                      # Now parallel processing?
       unless @interpreter.running?              # Not running
-        @interpreter.setup(@list, @event.id)    # Set up
+        @interpreter.setup(@list, @event.id, @page_id)    # Set up
       end
       @interpreter.update                       # Update interpreter
     end

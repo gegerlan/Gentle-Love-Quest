@@ -4,12 +4,15 @@ class Game_Actor < Game_Battler
   attr_accessor   :custom_attr
   
   attr_accessor   :mood
+  attr_accessor   :attribute_history
   
   alias glq_initialize initialize
   
   def initialize(actor_id)
     glq_initialize(actor_id)
  
+    @attribute_history = {}
+    
     @mood = "neutral"
 
     @stats = {
@@ -66,7 +69,21 @@ class Game_Actor < Game_Battler
   #   attribute: attribute name to raise
   #   delta: the improvement to the attribute
   #   max: the highest value the raise can increase towards (i.e. attribute can't be raised beyond this value)
-  def raise(attribute, delta, max)
+  #   context: the context uniquely identifying the change
+  def raise(attribute, delta, max, context = nil)
+    if context != nil
+      context << attribute # add the attribute to the context, so changes to different attributes aren't thought of as being the same.
+      if @attribute_history[context]
+        delta = delta / (@attribute_history[context].length + 1)
+        if delta.floor <= 1
+          delta = 0
+        end
+      else
+        @attribute_history[context] = []
+      end
+      timestamp = Graphics.frame_count / Graphics.frame_rate #ingame time
+      @attribute_history[context] << timestamp
+    end
     current_value = self.send attribute
     if max < current_value
       # Skip if the current value is greater than the max value provided
@@ -86,7 +103,8 @@ class Game_Actor < Game_Battler
   #   attribute: attribute name to raise
   #   delta: the decrease of the attribute
   #   min: the smallest value the lower can decrease towards (i.e. attribute can't be lowered beyond this value)
-  def lower(attribute, delta, min)
+  #   context: the context uniquely identifying the change
+  def lower(attribute, delta, min, context = nil)
     current_value = self.send attribute
     if min > current_value 
       # Skip if the current value is less than the min value provided
@@ -117,5 +135,18 @@ class Game_Actor < Game_Battler
       end
     end
     super(sym, *args, &block)
+  end
+end
+
+class Game_Interpreter
+  # Improve the attribute of the player, with a max possible value to alter towards.
+  #   attribute: name of attribute to raise
+  #   amount:  how much to change the attribute
+  #   max: to top value the change may increase to
+  #   extra_context: 
+  def raise(attribute, amount, max, extra_context = nil)
+    context = [$game_map.map_id, @event_id, @page_id]
+    context << extra_context if extra_context != nil
+    $game_party.members[0].raise(attribute, amount, max, context)
   end
 end

@@ -27,6 +27,7 @@ class Game_Interpreter
     @map_id = 0                       # Map ID when starting up
     @original_event_id = 0            # Event ID when starting up
     @event_id = 0                     # Event ID
+    @page_id = 0                      # Page ID
     @list = nil                       # Execution content
     @index = 0                        # Index
     @message_waiting = false          # Waiting for message to end
@@ -40,11 +41,12 @@ class Game_Interpreter
   #     list     : list of event commands
   #     event_id : event ID
   #--------------------------------------------------------------------------
-  def setup(list, event_id = 0)
+  def setup(list, event_id = 0, page_id = 0)
     clear                             # Clear internal interpreter state
     @map_id = $game_map.map_id        # Memorize map ID
     @original_event_id = event_id     # Memorize event ID
     @event_id = event_id              # Memorize event ID
+    @page_id = page_id                # Memorize page ID
     @list = list                      # Memorize execution contents
     @index = 0                        # Initialize index
     cancel_menu_call                  # Cancel menu call
@@ -82,7 +84,7 @@ class Game_Interpreter
     for event in $game_map.events.values  # Map event
       if event.starting                   # If a starting event is found
         event.clear_starting              # Clear starting flag
-        setup(event.list, event.id)       # Set up event
+        setup(event.list, event.id, event.page_id) # Set up event
         return
       end
     end

@@ -171,9 +171,11 @@ class Game_Troop < Game_Unit
       $game_temp.common_event_id = 0
       return
     end
+    page_index = troop.pages.length
     for page in troop.pages
+      page_index -= 1
       next unless conditions_met?(page)
-      @interpreter.setup(page.list)
+      @interpreter.setup(page.list, page_index)
       if page.span <= 1
         @event_flags[page] = true
       end
