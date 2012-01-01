@@ -65,6 +65,43 @@ class Game_Actor < Game_Battler
     sizes = ["A", "B", "C", "D", "DD", "DDD", "E", "F","G","H","HH","HHH","Insane"]
     return sizes[index]
   end
+  
+  def get_context_occurance(attribute, context)
+    history = @attribute_history[attribute] ||= []
+    context_instances = history.select { |instance| instance[:context] == context }
+    context_instances.length
+  end
+  
+  def update_history(attribute, time, context, value)
+    history = @attribute_history[attribute] ||= []
+    i = history.find { |item| item[:time] == time && item[:context] == context }
+    i[:value] = value
+  end
+  
+  def remove_history(attribute, context = nil, time = nil)
+    if context != nil || time != nil
+      history = @attribute_history[attribute] ||= []
+      history.remove! do |item|
+        doRemove = false
+        if context != nil
+          doRemove = item[:context] == context
+        end
+        if time != nil && (context == nil || doRemove)
+          doRemove = item[:time] == time
+        end
+        doRemove
+      end
+    end
+  end
+  
+  def add_history(attribute, context, value)
+    time = Graphics.frame_count
+    item = {:time => time, :context => context, :value => value}
+    
+    history = @attribute_history[attribute] ||= []
+    history << item
+  end
+  
   # Raise one of the attributes for the actor.
   #   attribute: attribute name to raise
   #   delta: the improvement to the attribute
@@ -72,18 +109,8 @@ class Game_Actor < Game_Battler
   #   context: the context uniquely identifying the change
   def raise(attribute, delta, max, context = nil)
     if context != nil
-      context << attribute # add the attribute to the context, so changes to different attributes aren't thought of as being the same.
-      context << "raise" # add the type of change
-      if @attribute_history[context]
-        delta = delta / (@attribute_history[context].length + 1)
-        if delta.floor <= 1
-          delta = 0
-        end
-      else
-        @attribute_history[context] = []
-      end
-      timestamp = Graphics.frame_count / Graphics.frame_rate #ingame time
-      @attribute_history[context] << timestamp
+      delta = delta / (get_context_occurance(attribute, context) + 1)
+      add_history(attribute, context, delta.abs)
     end
     current_value = self.send attribute
     if max < current_value
@@ -107,18 +134,8 @@ class Game_Actor < Game_Battler
   #   context: the context uniquely identifying the change
   def lower(attribute, delta, min, context = nil)
     if context != nil
-      context << attribute # add the attribute to the context, so changes to different attributes aren't thought of as being the same.
-      context << "lower" # add the type of change
-      if @attribute_history[context]
-        delta = delta / (@attribute_history[context].length + 1)
-        if delta.floor <= 1
-          delta = 0
-        end
-      else
-        @attribute_history[context] = []
-      end
-      timestamp = Graphics.frame_count / Graphics.frame_rate #ingame time
-      @attribute_history[context] << timestamp
+      delta = delta / (get_context_occurance(attribute, context) + 1)
+      add_history(attribute, context, -delta.abs)
     end
     current_value = self.send attribute
     if min > current_value 
