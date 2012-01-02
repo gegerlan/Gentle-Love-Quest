@@ -117,6 +117,7 @@
 44721910    GLQ Equipment CE call                        GLQ_Equipment_CE_call.rb
 6377774     GLQ Debug Log                                GLQ_Debug_Log.rb
 21463457    GLQ Mood                                     GLQ_Mood.rb
+47783133    GLQ Karma                                    GLQ_Karma.rb
 14385854    ▼ Main Process                             EMPTY
 32270711    Main                                         Main.rb
 11708360                                                 EMPTY
