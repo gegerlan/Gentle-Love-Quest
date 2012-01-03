@@ -121,3 +121,50 @@ class Game_Actor < Game_Battler
     super(sym, *args, &block)
   end
 end
+
+class Game_Party < Game_Unit
+  # returns the sum of the attribute for all party members
+  def sum(attribute)
+    return members.inject(0) { |sum, actor|
+      sum += actor.send(attribute)
+    }
+  end
+  # returns the highest value of the attribute that exists in the party
+  def max(attribute)
+    return members.max { |actor1, actor2|
+      actor1.send(attribute) <=> actor2.send(attribute)
+    }.send(attribute)
+  end
+  # returns the lowest value of the attribute that exists in the party
+  def min(attribute)
+    return members.min { |actor1, actor2|
+      actor1.send(attribute) <=> actor2.send(attribute)
+    }.send(attribute) 
+  end
+  # returns the average value of the attribute that exists in the party
+  def avg(attribute)
+    return sum(attribute) / @actors.length.to_f
+  end
+  # raise an attribute for all party members
+  #   attribute: attribute name
+  #   delta: the amount to change
+  #   max: cut-off value, the maximum value the change can change towards
+  def raise(attribute, delta, max)
+    sum = 0
+    members.each do |actor|
+      sum += actor.raise(attribute, delta, max)
+    end
+    sum
+  end
+  # lower an attribute for all party members
+  #   attribute: attribute name
+  #   delta: the amount to change
+  #   min: cut-off value, the minimum value the change can change towards
+  def lower(attribute, delta, min)
+    sum = 0
+    members.each do |actor|
+      sum += actor.lower(attribute, delta, min)
+    end
+    sum
+  end
+end
