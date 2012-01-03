@@ -79,14 +79,18 @@ class Achievements
   def size
     return @data_achievements.length
   end
-  # Load store achievement data
-  def load_data
+  def load_save(fi = nil)
     begin
-      fi = File.open(SAVE_FILE, "rb")
+      fi = File.open(SAVE_FILE, "rb") if fi == nil
       completes = Marshal.load(fi)
     rescue
       completes = []
     end
+    completes
+  end
+  # Load store achievement data
+  def load_data
+    completes = load_save
     ACHIEVEMENTS.each do |index, content|
       title, passed, description = content
       completed = completes.include?(index)
@@ -95,15 +99,15 @@ class Achievements
   end
   # Save cleared achievements to SAVE_FILE
   def save
-    cleared_achievements = []
+    completed_achievements = []
     @data_achievements.each do |index, achievement|
-      cleared_achievements << index if achievement.completed?
+      completed_achievements << index if achievement.completed?
     end
-    fo = File.open(SAVE_FILE, "wb")
-    begin
-      Marshal.dump(cleared_achievements, fo)
-    ensure
-      fo.close
+    
+    File.open(SAVE_FILE, "wb+") do |f|
+      f.flock File::LOCK_EX
+      completed_achievements |= load_save(f)
+      Marshal.dump(completed_achievements, f)
     end
   end
   # Remove all achievements
