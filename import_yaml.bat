@@ -12,7 +12,7 @@ REM #  Setup the Paths for the Importer/Exporter
 REM #========================================================
 
 REM # Where the script files can be found
-SET SCRIPTS_DIR=Rvdata Versioning Utility
+SET SCRIPTS_DIR=Rvdata_Versioning_Utility
 
 REM # Where the project folder can be found
 SET PROJECT_DIR=.
