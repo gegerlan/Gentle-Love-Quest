@@ -5,9 +5,9 @@ Im sure I should write something useful, but... meh!
 
 ## Downloads
 
-* [ZIP](https://github.com/glqgamemaster/Gentle-Love-Quest/zipball/master)
-* [SVN](http://svn.github.com/glqgamemaster/Gentle-Love-Quest.git)
-* [Git](git://github.com/glqgamemaster/Gentle-Love-Quest.git)
+* ZIP: https://github.com/glqgamemaster/Gentle-Love-Quest/zipball/master
+* SVN: https://github.com/glqgamemaster/Gentle-Love-Quest/trunk
+* Git: git://github.com/glqgamemaster/Gentle-Love-Quest.git
 
 ## Requirements
 
